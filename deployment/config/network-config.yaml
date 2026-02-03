@@ -1,0 +1,73 @@
+# Network Configuration for ScrollVerse Deployment
+
+# MainNet Configuration
+mainnet:
+  name: "ScrollVerse MainNet"
+  chainId: 274
+  rpcUrl: "https://scroll.scrollverse.io"
+  wsUrl: "wss://scroll.scrollverse.io/ws"
+  explorer: "https://explorer.scrollverse.io"
+  currency:
+    name: "ScrollVerse Ether"
+    symbol: "SVETH"
+    decimals: 18
+  
+# TestNet Configuration
+testnet:
+  name: "ScrollVerse TestNet"
+  chainId: 274001
+  rpcUrl: "https://testnet.scrollverse.io"
+  wsUrl: "wss://testnet.scrollverse.io/ws"
+  explorer: "https://testnet-explorer.scrollverse.io"
+  faucet: "https://faucet.scrollverse.io"
+  currency:
+    name: "Test ScrollVerse Ether"
+    symbol: "tSVETH"
+    decimals: 18
+
+# Local Development
+development:
+  name: "ScrollVerse Local"
+  chainId: 1337
+  rpcUrl: "http://localhost:8545"
+  currency:
+    name: "Dev Ether"
+    symbol: "DEV"
+    decimals: 18
+
+# Gas Configuration
+gas:
+  default:
+    gasLimit: 8000000
+    gasPrice: "auto"
+  
+  contracts:
+    daoGovernance:
+      gasLimit: 5000000
+    scrollSoulDSP:
+      gasLimit: 4000000
+    vibraniumZakat:
+      gasLimit: 4000000
+
+# RPC Endpoints (fallback options)
+rpcEndpoints:
+  primary: "https://scroll.scrollverse.io"
+  fallback:
+    - "https://rpc1.scrollverse.io"
+    - "https://rpc2.scrollverse.io"
+    - "https://rpc3.scrollverse.io"
+
+# Block Explorer APIs
+explorers:
+  mainnet: "https://api.explorer.scrollverse.io/api"
+  testnet: "https://api.testnet-explorer.scrollverse.io/api"
+
+# IPFS Configuration (for metadata storage)
+ipfs:
+  gateway: "https://ipfs.scrollverse.io"
+  api: "https://ipfs-api.scrollverse.io"
+
+# Oracle Configuration (for price feeds)
+oracles:
+  chainlink: "https://oracle.scrollverse.io"
+  fallback: "https://oracle-backup.scrollverse.io"
